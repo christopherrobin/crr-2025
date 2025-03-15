@@ -1,29 +1,20 @@
 import Image from "next/image";
+import ContactCTA from "./ContactCTA";
 
 export default function BusinessCard() {
   return (
-    <div className="bg-white dark:bg-stone-800 rounded-lg shadow-md overflow-hidden">
-      <div className="relative h-64 w-full">
-        <Image 
-          src="/beach.jpg" 
-          alt="Christopher's day at the lake" 
-          fill
-          className="object-cover"
-          priority
-        />
-      </div>
+    <div className="bg-slate-200 dark:bg-geist-800 rounded-lg shadow-md overflow-hidden">
       
       <div className="p-6">
-        <h2 className="text-xl font-semibold mb-3 dark:text-white">Christopher Reynolds</h2>
+        <h2 className="text-xl font-semibold mb-3 text-stone-800">Christopher Reynolds</h2>
         
-        <p className="text-blue-200 dark:text-white mb-6">
+        <p className="mb-6 text-geist-600 dark:text-stone-900">
           Senior Software Engineer experienced in application design and development, translating business
           requirements to technical specifications, project management, and microservice architecture seeks
           a position which will leverage current and emerging technologies in order to pursue company goals.
         </p>
-        
-        {/* Changed to grid-cols-3 for mobile, grid-cols-5 for medium screens */}
-        <div className="grid grid-cols-3 md:grid-cols-5 gap-4 mt-6">
+
+        <div className="grid grid-cols-3 md:grid-cols-6 gap-4 my-10">
           <div className="flex flex-col items-center">
             <div className="w-12 h-12 relative">
               <Image
@@ -33,7 +24,7 @@ export default function BusinessCard() {
                 className="object-contain"
               />
             </div>
-            <div className="text-sm mt-2">React</div>
+            <div className="text-sm mt-2 text-slate-900">React</div>
           </div>
 
           <div className="flex flex-col items-center">
@@ -45,7 +36,19 @@ export default function BusinessCard() {
                 className="object-contain"
               />
             </div>
-            <div className="text-sm mt-2">TypeScript</div>
+            <div className="text-sm mt-2 text-slate-900">TypeScript</div>
+          </div>
+          
+          <div className="flex flex-col items-center">
+            <div className="w-12 h-12 relative">
+              <Image
+                src="/next.svg"
+                alt="Next.js logo"
+                fill
+                className="object-contain"
+              />
+            </div>
+            <div className="text-sm mt-2 text-slate-900">Next.js</div>
           </div>
           
           <div className="flex flex-col items-center">
@@ -57,7 +60,7 @@ export default function BusinessCard() {
                 className="object-contain"
               />
             </div>
-            <div className="text-sm mt-2">Node.js</div>
+            <div className="text-sm mt-2 text-slate-900">Node.js</div>
           </div>
           
           <div className="flex flex-col items-center">
@@ -69,7 +72,7 @@ export default function BusinessCard() {
                 className="object-contain"
               />
             </div>
-            <div className="text-sm mt-2">GraphQL</div>
+            <div className="text-sm mt-2 text-slate-900">GraphQL</div>
           </div>
 
           <div className="flex flex-col items-center">
@@ -81,8 +84,12 @@ export default function BusinessCard() {
                 className="object-contain p-1"
               />
             </div>
-            <div className="text-sm mt-2">AWS</div>
+            <div className="text-sm mt-2 text-slate-900">AWS</div>
           </div>
+        </div>
+
+        <div>
+          <ContactCTA />
         </div>
       </div>
     </div>

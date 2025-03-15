@@ -1,42 +1,29 @@
 "use client";
-
-import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 export default function Navigation() {
   const pathname = usePathname();
-  
-  const isActive = (path: string) => {
-    return pathname === path;
-  };
+
+  const getLinkClass = (path: string) => 
+    `rounded-full px-2 py-1 transition-colors font-bold text-xlarge cursor-pointer ${
+      pathname === path
+        ? "bg-slate-700 text-white"
+        : "text-slate-700 hover:bg-slate-700 hover:text-white"
+    }`;
+
+  const links = [
+    { href: "/", label: "Home" },
+    { href: "/resume", label: "Resume" }
+  ];
 
   return (
     <nav>
-      <div className="flex flex-wrap gap-2">
-        <Link href="/" 
-          className={`px-4 py-2 rounded-full transition-colors ${
-            isActive("/") 
-              ? "bg-blue-600 text-white" 
-              : "bg-slate-200 dark:bg-slate-800 hover:bg-blue-100 dark:hover:bg-slate-700"
-          }`}>
-          Home
-        </Link>
-        <Link href="/resume" 
-          className={`px-4 py-2 rounded-full transition-colors ${
-            isActive("/resume") 
-              ? "bg-blue-600 text-white" 
-              : "bg-slate-200 dark:bg-slate-800 hover:bg-blue-100 dark:hover:bg-slate-700"
-          }`}>
-          Resume
-        </Link>
-        <Link href="/contact" 
-          className={`px-4 py-2 rounded-full transition-colors ${
-            isActive("/contact") 
-              ? "bg-blue-600 text-white" 
-              : "bg-slate-200 dark:bg-slate-800 hover:bg-blue-100 dark:hover:bg-slate-700"
-          }`}>
-          Contact
-        </Link>
+      <div className="flex flex-wrap gap-2" id="navigation">
+        {links.map(({ href, label }) => (
+            <button key={href} onClick={() => window.location.href = href} className={getLinkClass(href)}>
+            {label}
+            </button>
+        ))}
       </div>
     </nav>
   );

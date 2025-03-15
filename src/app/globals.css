@@ -2,14 +2,14 @@
 
 /* Light mode variables (default) */
 :root {
-  --background: #ffffff;
+  --background: #ededed;
   --foreground: #171717;
   font-size: 16px;
 }
 
 /* Dark mode variables - applied when dark class is on html element */
 .dark {
-  --background: #141212;
+  --background: var(--color-geist-900);
   --foreground: #ededed;
 }
 
@@ -85,4 +85,72 @@ html {
   html {
     font-size: 14px;
   }
+}
+
+a:link {
+  color: var(--color-indigo-500);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  color: var(--color-indigo-200);
+}
+
+
+.dark a:link {
+  color: var(--color-indigo-300);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.dark a:hover {
+  color: var(--color-indigo-200);
+}
+/* 
+.dark #navigation a:hover {
+  color: 'red';
+  text-decoration: none;
+  font-weight: bold;
+} */
+
+:root {
+  --heading-color: var(--color-slate-600);
+  --heading-font-weight: 700;
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: var(--heading-font-weight);
+  color: var(--heading-color);
+}
+
+h1 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 2rem;
+  line-height: 1.3;
+}
+
+h3 {
+  font-size: 1.5rem;
+  line-height: 1.4;
+}
+
+h4 {
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+h5 {
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+p {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: var(--color-slate-800);
 }
