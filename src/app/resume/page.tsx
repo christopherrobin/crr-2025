@@ -131,7 +131,7 @@ export default function Resume() {
                     <li>The collection, measurement, analysis, and reporting of web data for the purpose of optimizing web usage (emphasis on UI/UX, web performance, and multi-variant testing)</li>
                     <li>Responsible for the removal of analytical tools such as Omniture, Google Analytics, ClearSaleing, OpinionLab, and more. I then re-implemented them via Adobe&apos;s Dynamic Tag Management system.</li>
                     <li>
-                      We won the <a href="https://www.jdpower.com/business/press-releases/2014-appliance-shopper-website-evaluation-study" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">award for "2014 Best Retail Website"</a> from J.D. Power and associates, beating out contenders like Best Buy, Lowe&apos;s, Costco, Sears, and Home Depot
+                      We won the <a href="https://www.jdpower.com/business/press-releases/2014-appliance-shopper-website-evaluation-study" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">award for &quot;2014 Best Retail Website&quot;</a> from J.D. Power and associates, beating out contenders like Best Buy, Lowe&apos;s, Costco, Sears, and Home Depot
                     </li>
                     <li>Estimated total e-commerce sales were $50 million in 2013, a 39% increase compared to 2012</li>
                     <li>2015 Q3 Quarterly Earnings reports reveal a 60% increase in hh gregg e-commerce sales despite a 5.9% decline in in-store sales</li>
