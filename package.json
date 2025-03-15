@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "description": "Christopher Reynolds Resume",
   "private": false,
+  "author": {
+    "name": "Christopher Reynolds",
+    "email": "christopherrr@duck.com"
+  },
+  "license": "MIT",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
