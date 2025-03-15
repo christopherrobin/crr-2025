@@ -1,8 +1,16 @@
 @import "tailwindcss";
 
+/* Light mode variables (default) */
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  font-size: 16px;
+}
+
+/* Dark mode variables - applied when dark class is on html element */
+.dark {
+  --background: #141212;
+  --foreground: #ededed;
 }
 
 @theme inline {
@@ -12,17 +20,12 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #141212;
-    --foreground: #ededed;
-  }
-}
-
+/* Apply the CSS variables to the body */
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 html {
@@ -71,5 +74,15 @@ html {
   }
   100% {
     opacity: 0;
+  }
+}
+
+.scroll-mt-16 {
+  scroll-margin-top: 4rem;
+}
+
+@media (max-width: 640px) {
+  html {
+    font-size: 14px;
   }
 }

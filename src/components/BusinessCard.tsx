@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function BusinessCard() {
   return (
-    <div className="bg-white dark:bg-slate-800 rounded-lg shadow-md overflow-hidden">
+    <div className="bg-white dark:bg-stone-800 rounded-lg shadow-md overflow-hidden">
       <div className="relative h-64 w-full">
         <Image 
           src="/beach.jpg" 
@@ -14,9 +14,9 @@ export default function BusinessCard() {
       </div>
       
       <div className="p-6">
-        <h2 className="text-xl font-semibold mb-3">Christopher Reynolds</h2>
+        <h2 className="text-xl font-semibold mb-3 dark:text-white">Christopher Reynolds</h2>
         
-        <p className="text-slate-700 dark:text-slate-300 mb-6">
+        <p className="text-blue-200 dark:text-white mb-6">
           Senior Software Engineer experienced in application design and development, translating business
           requirements to technical specifications, project management, and microservice architecture seeks
           a position which will leverage current and emerging technologies in order to pursue company goals.

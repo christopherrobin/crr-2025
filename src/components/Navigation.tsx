@@ -11,8 +11,8 @@ export default function Navigation() {
   };
 
   return (
-    <div className="w-full py-4">
-      <div className="flex flex-wrap gap-2 justify-center">
+    <nav>
+      <div className="flex flex-wrap gap-2">
         <Link href="/" 
           className={`px-4 py-2 rounded-full transition-colors ${
             isActive("/") 
@@ -38,6 +38,6 @@ export default function Navigation() {
           Contact
         </Link>
       </div>
-    </div>
+    </nav>
   );
 }
