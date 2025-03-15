@@ -80,7 +80,7 @@ export default function Resume() {
             <h2 className="text-2xl font-bold pb-2 mb-4 border-b border-slate-400 dark:border-slate-400">Personal Projects</h2>
             
             <div>
-              <p>Archived Personal projects available at <a href="https://github.com/christopherrobin/" target="_blank" rel="noopener noreferrer" className="text-slate-600 hover:underline">https://github.com/christopherrobin/</a></p>
+              <p><a href="https://github.com/christopherrobin/crr-2025" target="_blank" rel="noopener noreferrer" className="text-slate-600 hover:underline">This project</a> and other, older personal projects available at <a href="https://github.com/christopherrobin/" target="_blank" rel="noopener noreferrer" className="text-slate-600 hover:underline">https://github.com/christopherrobin/</a></p>
             </div>
           </section>
           
