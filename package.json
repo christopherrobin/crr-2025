@@ -1,7 +1,8 @@
 {
   "name": "crr-2025",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
+  "description": "Christopher Reynolds Resume",
+  "private": false,
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
