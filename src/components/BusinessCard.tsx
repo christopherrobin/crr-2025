@@ -34,6 +34,7 @@ export default function BusinessCard() {
                 alt="Typescript logo"
                 fill
                 className="object-contain"
+                priority
               />
             </div>
             <div className="text-sm mt-2 text-slate-900">TypeScript</div>

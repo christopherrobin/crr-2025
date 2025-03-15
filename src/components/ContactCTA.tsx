@@ -2,7 +2,7 @@
 
 export default function ContactCTA() {
   return (
-              <div className="space-y-4">
+          <div className="space-y-4" id="contact-cta">
             <a
               href="http://github.com/christopherrobin"
               target="_blank"

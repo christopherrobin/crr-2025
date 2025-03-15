@@ -20,18 +20,19 @@ export default function Resume() {
 
   return (
     <PageLayout>
-      <div className="grid md:grid-cols1 gap-8">
+      <div className="grid md:grid-cols1 gap-8 fadeIn">
         <div className="space-y-6">
           <h1 className="text-4xl font-bold mb-6">Resume</h1>
           
           <div className="flex flex-wrap gap-2">
-            <div className="mb-2 font-medium">Jump to:</div>
-            {jobs.map((job, index) => (
-              <React.Fragment key={job.id}>
-                <a href={`#${job.id}`} className="hover:underline">{job.company}</a>
-                {index < jobs.length - 1 && ','}
-              </React.Fragment>
-            ))}
+              <p>
+              <span className="mb-2 font-bold">Jump to: </span>
+              {jobs.map((job, index) => (
+                <React.Fragment key={job.id}>
+                  <a href={`#${job.id}`} className="hover:underline">{job.company}</a>{index < jobs.length - 1 && ', '}
+                </React.Fragment>
+              ))}
+            </p>
           </div>
           
           <section>

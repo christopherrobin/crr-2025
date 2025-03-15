@@ -4,7 +4,7 @@ import BusinessCard from "@/components/BusinessCard";
 export default function Home() {
   return (
     <PageLayout>
-      <div className="grid md:grid-cols-2 gap-8">
+      <div className="fadeIn grid md:grid-cols-2 gap-8">
         <div className="space-y-4">
           <h1 className="text-4xl font-bold">Hello! 👋🤓☕</h1>
 

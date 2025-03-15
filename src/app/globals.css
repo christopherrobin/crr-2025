@@ -88,14 +88,27 @@ html {
 }
 
 a:link {
-  color: var(--color-indigo-500);
-  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:visited, a:link {
+  color: var(--color-slate-500);
   font-weight: bold;
 }
 
 a:hover {
+  color: var(--color-slate-700);
+}
+
+#contact-cta a:visited, #contact a:link {
+  color: var(--color-white);
+  font-weight: bold;
+}
+
+#contact-cta a:hover {
   color: var(--color-indigo-200);
 }
+
 
 
 .dark a:link {
