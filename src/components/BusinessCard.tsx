@@ -3,12 +3,21 @@ import ContactCTA from "./ContactCTA";
 
 export default function BusinessCard() {
   return (
-    <div className="bg-slate-200 dark:bg-geist-800 rounded-lg shadow-md overflow-hidden">
+    <div className="bg-slate-200 dark:bg-geist-800 rounded-lg shadow-md overflow-hidden p-6">
       
-      <div className="p-6">
-        <h2 className="text-xl font-semibold mb-3 text-stone-800">Christopher Reynolds</h2>
+      
+        <div className="flex justify-center">
+          <Image
+            src="/crr.png"
+            alt="Christopher Reynolds"
+            width={150}
+            height={150}
+            className="rounded-full"
+          />
+            <h1 className="ml-6 mt-4 text-xl font-semiboldtext-xl font-semibold text-stone-800">Christopher Reynolds</h1>
+        </div>
         
-        <p className="mb-6 text-geist-600 dark:text-stone-900">
+        <p className="my-6 text-geist-600 dark:text-stone-900">
           Senior Software Engineer experienced in application design and development, translating business
           requirements to technical specifications, project management, and microservice architecture seeks
           a position which will leverage current and emerging technologies in order to pursue company goals.
@@ -92,7 +101,7 @@ export default function BusinessCard() {
         <div>
           <ContactCTA />
         </div>
-      </div>
+      
     </div>
   );
 }
