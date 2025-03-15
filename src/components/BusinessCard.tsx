@@ -6,7 +6,7 @@ export default function BusinessCard() {
       {/* We'll need to add the actual images to your public folder */}
       <div className="relative h-64 w-full">
         <Image 
-          src="/images/beach.jpg" 
+          src="/beach.jpg" 
           alt="Christopher's day at the lake" 
           fill
           className="object-cover"
@@ -27,7 +27,7 @@ export default function BusinessCard() {
           <div className="flex flex-col items-center">
             <div className="w-12 h-12 relative">
               <Image
-                src="/images/react.svg"
+                src="/react.svg"
                 alt="React logo"
                 fill
                 className="object-contain"
@@ -35,11 +35,23 @@ export default function BusinessCard() {
             </div>
             <div className="text-sm mt-2">React</div>
           </div>
+
+          <div className="flex flex-col items-center">
+            <div className="w-12 h-12 relative">
+              <Image
+                src="/typescript.svg"
+                alt="Typescript logo"
+                fill
+                className="object-contain"
+              />
+            </div>
+            <div className="text-sm mt-2">TypeScript</div>
+          </div>
           
           <div className="flex flex-col items-center">
             <div className="w-12 h-12 relative">
               <Image
-                src="/images/node.svg"
+                src="/node.svg"
                 alt="Node.js logo"
                 fill
                 className="object-contain"
@@ -51,19 +63,7 @@ export default function BusinessCard() {
           <div className="flex flex-col items-center">
             <div className="w-12 h-12 relative">
               <Image
-                src="/images/redux.svg"
-                alt="Redux logo"
-                fill
-                className="object-contain"
-              />
-            </div>
-            <div className="text-sm mt-2">Redux</div>
-          </div>
-          
-          <div className="flex flex-col items-center">
-            <div className="w-12 h-12 relative">
-              <Image
-                src="/images/graphql.png"
+                src="/graphql.png"
                 alt="GraphQL logo"
                 fill
                 className="object-contain"

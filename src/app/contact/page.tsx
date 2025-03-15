@@ -70,10 +70,10 @@ export default function Contact() {
             <div className="flex items-center justify-center">
               <div className="relative w-full h-96 md:h-full rounded-lg overflow-hidden">
                 <Image
-                  src="/images/beach2.jpg"
-                  alt="Christopher in front of the ocean"
+                  src="/beach2.jpg"
+                  alt="Christopher in front of the ocean (I like water)"
                   fill
-                  className="object-cover"
+                  className="object-contain"
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </div>
