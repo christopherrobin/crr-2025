@@ -30,8 +30,8 @@ A modern, responsive personal developer portfolio built with Next.js, TypeScript
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/portfolio.git
-   cd portfolio
+   git clone https://github.com/christopherrobin/crr-2025
+   cd crr-2025
    ```
 
 2. Install dependencies:
