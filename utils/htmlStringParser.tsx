@@ -1,4 +1,3 @@
-// utils/htmlStringParser.tsx
 import React from 'react';
 
 /**

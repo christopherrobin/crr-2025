@@ -1,4 +1,3 @@
-// components/ResumeEntries.tsx
 import React from 'react';
 import { Job } from '../../data/Resume';
 import { parseHtmlLinks } from '../../utils/htmlStringParser';

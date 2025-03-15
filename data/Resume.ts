@@ -1,4 +1,3 @@
-// data/resume.ts
 export type Skill = {
   category: string;
   skills: string;
