@@ -3,7 +3,6 @@ import Image from "next/image";
 export default function BusinessCard() {
   return (
     <div className="bg-white dark:bg-slate-800 rounded-lg shadow-md overflow-hidden">
-      {/* We'll need to add the actual images to your public folder */}
       <div className="relative h-64 w-full">
         <Image 
           src="/beach.jpg" 
@@ -23,7 +22,8 @@ export default function BusinessCard() {
           a position which will leverage current and emerging technologies in order to pursue company goals.
         </p>
         
-        <div className="grid grid-cols-4 gap-4 mt-6">
+        {/* Changed to grid-cols-3 for mobile, grid-cols-5 for medium screens */}
+        <div className="grid grid-cols-3 md:grid-cols-5 gap-4 mt-6">
           <div className="flex flex-col items-center">
             <div className="w-12 h-12 relative">
               <Image
@@ -70,6 +70,18 @@ export default function BusinessCard() {
               />
             </div>
             <div className="text-sm mt-2">GraphQL</div>
+          </div>
+
+          <div className="flex flex-col items-center">
+            <div className="w-12 h-12 relative bg-white rounded-full">
+              <Image
+                src="/aws.png"
+                alt="AWS logo"
+                fill
+                className="object-contain p-1"
+              />
+            </div>
+            <div className="text-sm mt-2">AWS</div>
           </div>
         </div>
       </div>
