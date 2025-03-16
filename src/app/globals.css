@@ -9,7 +9,7 @@
 
 /* Dark mode variables - applied when dark class is on html element */
 .dark {
-  --background: var(--color-gray-800);
+  --background: var(--color-zinc-900);
   --foreground: #ededed;
 }
 
@@ -24,7 +24,6 @@
 body {
   background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -169,3 +168,4 @@ p {
   line-height: 1.6;
   color: var(--color-slate-800);
 }
+

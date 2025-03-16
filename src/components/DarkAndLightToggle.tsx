@@ -8,16 +8,27 @@ export default function DarkAndLightToggle() {
   const [mounted, setMounted] = useState(false);
 
   // Avoid hydration mismatch
-  useEffect(() => setMounted(true), []);
+  useEffect(() => {
+    setMounted(true);
+  }, []);
   
-  // Don't render anything until after client-side hydration to prevent mismatch
-  if (!mounted) return null;
+  // Don't render until mounted to prevent hydration mismatch
+  if (!mounted) {
+    // Return a placeholder with the same dimensions to prevent layout shift
+    return (
+      <div className="flex items-center">
+        <div className="p-2 rounded-full bg-transparent w-9 h-9"></div>
+        <span className="ml-2 text-sm font-medium hidden sm:inline invisible">Mode</span>
+      </div>
+    );
+  }
 
   const isDarkMode = theme === "dark";
 
   return (
-    <div className="flex items-center" onClick={() => setTheme(isDarkMode ? "light" : "dark")}>
+    <div className="flex items-center">
       <button
+        onClick={() => setTheme(isDarkMode ? "light" : "dark")}
         className="p-2 rounded-full bg-slate-200 dark:bg-slate-700 hover:bg-geist-300 dark:hover:bg-slate-700 transition-colors cursor-pointer"
         aria-label={isDarkMode ? "Switch to light mode" : "Switch to dark mode"}
       >
@@ -59,7 +70,7 @@ export default function DarkAndLightToggle() {
           </svg>
         )}
       </button>
-      <span className="ml-2 text-sm font-medium hidden sm:inline cursor-pointer">
+      <span onClick={() => setTheme(isDarkMode ? "light" : "dark")} className="ml-2 text-sm font-medium hidden sm:inline cursor-pointer">
         Mode
       </span>
     </div>
