@@ -29,7 +29,7 @@ export default function DarkAndLightToggle() {
     <div className="flex items-center">
       <button
         onClick={() => setTheme(isDarkMode ? "light" : "dark")}
-        className="p-2 rounded-full bg-slate-200 dark:bg-slate-700 hover:bg-geist-300 dark:hover:bg-slate-700 transition-colors cursor-pointer"
+        className="p-2 rounded-full bg-zinc-200 dark:bg-zinc-700 hover:bg-zinc--300 dark:hover:bg-zinc-700 transition-colors cursor-pointer"
         aria-label={isDarkMode ? "Switch to light mode" : "Switch to dark mode"}
       >
         {isDarkMode ? (

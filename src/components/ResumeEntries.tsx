@@ -12,7 +12,7 @@ const ResumeEntry: React.FC<ResumeEntryProps> = ({ job }) => {
   return (
     <div id={id} className="scroll-mt-16">
       <h3 className="text-xl font-semibold">{title} at {company}</h3>
-      <p className="text-geist-600 dark:text-indigo-400 italic mb-2">{period}</p>
+      <p className="text-zinc-600 dark:text-indigo-400 italic mb-2">{period}</p>
       <p className="mb-3">{technologies}</p>
       <ul className="list-disc pl-5 space-y-1">
         {responsibilities.map((responsibility: string, index: number) => (

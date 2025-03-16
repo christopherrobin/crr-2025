@@ -36,7 +36,7 @@ export default function Resume() {
           </div>
           
           <section>
-            <h2 className="text-2xl font-bold pb-2 mb-4 border-b border-slate-400 dark:border-slate-400">Summary</h2>
+            <h2 className="text-2xl font-bold pb-2 mb-4 border-b border-zinc-400 dark:border-zinc-400">Summary</h2>
             
             <div className="space-y-6">
               {skills.map((skill, index) => (
@@ -60,28 +60,28 @@ export default function Resume() {
           </section>
           
           <section>
-            <h2 className="text-2xl font-bold pb-2 mb-4 border-b border-slate-400 dark:border-slate-400">Professional Experience</h2>
+            <h2 className="text-2xl font-bold pb-2 mb-4 border-b border-zinc-400 dark:border-zinc-400">Professional Experience</h2>
             
             <ResumeEntries jobs={jobs} />
           </section>
           
           <section>
-            <h2 className="text-2xl font-bold pb-2 mb-4 border-b border-slate-400 dark:border-slate-400">Education</h2>
+            <h2 className="text-2xl font-bold pb-2 mb-4 border-b border-zinc-400 dark:border-zinc-400">Education</h2>
             
             {education.map((edu, index) => (
               <div key={index}>
                 <h3 className="text-xl font-semibold">{edu.school}</h3>
                 <p>{edu.degree}</p>
-                <p className="text-geist-600 dark:text-indigo-400">{edu.period}</p>
+                <p className="text-zinc--600 dark:text-indigo-400">{edu.period}</p>
               </div>
             ))}
           </section>
           
           <section>
-            <h2 className="text-2xl font-bold pb-2 mb-4 border-b border-slate-400 dark:border-slate-400">Personal Projects</h2>
+            <h2 className="text-2xl font-bold pb-2 mb-4 border-b border-zinc-400 dark:border-zinc-400">Personal Projects</h2>
             
             <div>
-              <p><a href="https://github.com/christopherrobin/crr-2025" target="_blank" rel="noopener noreferrer" className="text-slate-600 hover:underline">This project</a> and other, older personal projects available at <a href="https://github.com/christopherrobin/" target="_blank" rel="noopener noreferrer" className="text-slate-600 hover:underline">https://github.com/christopherrobin/</a></p>
+              <p><a href="https://github.com/christopherrobin/crr-2025" target="_blank" rel="noopener noreferrer" className="text-zinc-600 hover:underline">This project</a> and other, older personal projects available at <a href="https://github.com/christopherrobin/" target="_blank" rel="noopener noreferrer" className="text-zinc-600 hover:underline">https://github.com/christopherrobin/</a></p>
             </div>
           </section>
           
@@ -90,7 +90,7 @@ export default function Resume() {
             <div className="fixed bottom-8 right-8">
               <button
                 onClick={scrollToTop}
-                className="bg-slate-600 hover:bg-slate-600 text-white p-3 rounded-full shadow-lg transition-colors flex items-center justify-center cursor-pointer"
+                className="bg-zinc-600 hover:bg-zinc-600 text-white p-3 rounded-full shadow-lg transition-colors flex items-center justify-center cursor-pointer"
                 aria-label="Back to top"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

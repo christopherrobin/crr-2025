@@ -18,10 +18,8 @@ export default function Navigation() {
           <li key={href}>
             <Link 
               href={href}
-              className={`font-medium transition-colors ${
-                pathname === href 
-                  ? "text-slate-900 dark:text-white"
-                  : "text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white"
+              className={`font-large transition-colors ${
+                pathname === href && "border-b-1 border-zinc-800 dark:border-zinc-300"
               }`}
             >
               {label}

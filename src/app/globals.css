@@ -91,12 +91,12 @@ a:link {
 }
 
 a:visited, a:link {
-  color: var(--color-slate-500);
+  color: var(--color-zinc-500);
   font-weight: bold;
 }
 
 a:hover {
-  color: var(--color-slate-700);
+  color: var(--color-zinc-700);
 }
 
 #contact-cta a:visited, #contact a:link {
@@ -108,26 +108,14 @@ a:hover {
   color: var(--color-indigo-200);
 }
 
-
-
-.dark a:link {
-  color: var(--color-indigo-300);
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.dark a:hover {
-  color: var(--color-indigo-200);
-}
-
 :root {
-  --heading-color: var(--color-slate-600);
+  --heading-color: var(--color-zinc-600);
   --heading-font-weight: 700;
 }
 
 h1, h2, h3, h4, h5 {
   font-weight: var(--heading-font-weight);
-  color: var(--heading-color);
+  color: var(--color-zinc-800);
 }
 
 .dark h1, .dark h2, .dark h3, .dark h4, .dark h5 {
@@ -166,6 +154,6 @@ h5 {
 p {
   font-size: 1.125rem;
   line-height: 1.6;
-  color: var(--color-slate-800);
+  color: var(--color-zinc-800);
 }
 

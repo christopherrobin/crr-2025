@@ -24,12 +24,12 @@ export default function Home() {
           </p>
 
           <div>
-            <p className="font-semibold text-slate-800">Expert:</p>
+            <p className="font-semibold text-zinc-800">Expert:</p>
             <p>TypeScript, JavaScript (ES6+), React, Node.js, Next.js, GraphQL, Redux, Tailwind, Material-UI, Jest, Cypress, AWS (Lambda, DynamoDB, S3, CloudFront, IAM, CloudWatch)</p>
           </div>
 
           <div>
-            <p className="font-semibold text-slate-800">Proficient:</p>
+            <p className="font-semibold text-zinc-800">Proficient:</p>
             <p>Scala, Redis, Kubernetes, Ruby, Java EE, C# .NET, PHP, SQL/MySQL/NoSQL</p>
           </div>
         </div>
