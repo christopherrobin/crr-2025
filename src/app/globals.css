@@ -1,83 +1,35 @@
 @import "tailwindcss";
 
-/* Light mode variables (default) */
+/* ============ Theme Variables ============ */
 :root {
+  /* Light mode variables (default) */
   --background: #ededed;
   --foreground: #171717;
+  --heading-color: var(--color-zinc-800);
+  --text-color: var(--color-zinc-800);
+  --link-color: var(--color-zinc-500);
+  --link-hover-color: var(--color-zinc-700);
+  --heading-font-weight: 700;
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
   font-size: 16px;
 }
 
-/* Dark mode variables - applied when dark class is on html element */
 .dark {
+  /* Dark mode variables */
   --background: var(--color-zinc-900);
   --foreground: #ededed;
+  --heading-color: var(--color-white);
+  --text-color: var(--color-white);
+  --link-color: var(--color-zinc-400);
+  --link-hover-color: var(--color-white);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-/* Apply the CSS variables to the body */
-body {
-  background-color: var(--background);
-  color: var(--foreground);
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
+/* ============ Base Styles ============ */
 html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-.fadeIn {
-  animation: fadeIn ease 800ms;
-  animation-fill-mode: forwards;
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-.expandIn {
-  animation: expandIn ease 500ms;
-}
-
-@keyframes expandIn {
-  0% {
-    opacity: 0;
-    transform: scale(0.9);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-.fadeOut {
-  animation: fadeOut ease 600ms;
-  animation-fill-mode: forwards;
-}
-
-@keyframes fadeOut {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-.scroll-mt-16 {
-  scroll-margin-top: 4rem;
 }
 
 @media (max-width: 640px) {
@@ -86,20 +38,48 @@ html {
   }
 }
 
-a:link {
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ============ Typography ============ */
+h1, h2, h3, h4, h5 {
+  font-weight: var(--heading-font-weight);
+  color: var(--heading-color);
+  line-height: 1.2;
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.5rem; }
+h4 { font-size: 1.25rem; }
+h5 { font-size: 1.125rem; }
+
+p {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: var(--text-color);
+}
+
+/* ============ Links ============ */
+a {
   transition: color 0.3s ease;
 }
 
-a:visited, a:link {
-  color: var(--color-zinc-500);
+a:link, a:visited {
+  color: var(--link-color);
   font-weight: bold;
 }
 
 a:hover {
-  color: var(--color-zinc-700);
+  color: var(--link-hover-color);
 }
 
-#contact-cta a:visited, #contact a:link {
+/* Special case for contact section */
+#contact-cta a:link, 
+#contact-cta a:visited {
   color: var(--color-white);
   font-weight: bold;
 }
@@ -108,52 +88,60 @@ a:hover {
   color: var(--color-indigo-200);
 }
 
-:root {
-  --heading-color: var(--color-zinc-600);
-  --heading-font-weight: 700;
+/* ============ Animations ============ */
+.fadeIn {
+  animation: fadeIn 800ms ease forwards;
 }
 
-h1, h2, h3, h4, h5 {
-  font-weight: var(--heading-font-weight);
-  color: var(--color-zinc-800);
+.expandIn {
+  animation: expandIn 500ms ease forwards;
 }
 
-.dark h1, .dark h2, .dark h3, .dark h4, .dark h5 {
-  color: var(--color-white);
+.fadeOut {
+  animation: fadeOut 600ms ease forwards;
 }
 
-.dark p {
-  color: var(--color-white);
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
-h1 {
-  font-size: 2.5rem;
-  line-height: 1.2;
+@keyframes expandIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
-h2 {
-  font-size: 2rem;
-  line-height: 1.3;
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
 }
 
-h3 {
-  font-size: 1.5rem;
-  line-height: 1.4;
+/* ============ Utility Classes ============ */
+.scroll-mt-16 {
+  scroll-margin-top: 4rem;
 }
 
-h4 {
-  font-size: 1.25rem;
-  line-height: 1.5;
+/* Page transitions for Next.js */
+.page-transition-enter {
+  opacity: 0;
 }
 
-h5 {
-  font-size: 1.125rem;
-  line-height: 1.6;
+.page-transition-enter-active {
+  opacity: 1;
+  transition: opacity 300ms ease;
 }
 
-p {
-  font-size: 1.125rem;
-  line-height: 1.6;
-  color: var(--color-zinc-800);
+.page-transition-exit {
+  opacity: 1;
 }
 
+.page-transition-exit-active {
+  opacity: 0;
+  transition: opacity 300ms ease;
+}
