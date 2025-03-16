@@ -9,7 +9,7 @@
 
 /* Dark mode variables - applied when dark class is on html element */
 .dark {
-  --background: var(--color-geist-900);
+  --background: var(--color-gray-800);
   --foreground: #ededed;
 }
 
@@ -120,12 +120,6 @@ a:hover {
 .dark a:hover {
   color: var(--color-indigo-200);
 }
-/* 
-.dark #navigation a:hover {
-  color: 'red';
-  text-decoration: none;
-  font-weight: bold;
-} */
 
 :root {
   --heading-color: var(--color-slate-600);
@@ -135,6 +129,14 @@ a:hover {
 h1, h2, h3, h4, h5 {
   font-weight: var(--heading-font-weight);
   color: var(--heading-color);
+}
+
+.dark h1, .dark h2, .dark h3, .dark h4, .dark h5 {
+  color: var(--color-white);
+}
+
+.dark p {
+  color: var(--color-white);
 }
 
 h1 {

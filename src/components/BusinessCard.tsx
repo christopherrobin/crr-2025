@@ -3,7 +3,7 @@ import ContactCTA from "./ContactCTA";
 
 export default function BusinessCard() {
   return (
-    <div className="bg-slate-200 dark:bg-geist-800 rounded-lg shadow-md overflow-hidden p-6">
+    <div className="bg-slate-300 rounded-lg shadow-md overflow-hidden p-6">
       
       
         <div className="flex justify-center">
@@ -14,14 +14,14 @@ export default function BusinessCard() {
             height={150}
             className="rounded-full"
           />
-            <h1 className="ml-6 mt-4 text-xl font-semiboldtext-xl font-semibold text-stone-800">Christopher Reynolds</h1>
+            <div className="ml-6 mt-6 text-4xl font-bold text-slate-600">Christopher Reynolds</div>
         </div>
         
-        <p className="my-6 text-geist-600 dark:text-stone-900">
+        <div className="my-4 dark:text-slate-600 font-semibold-lg">
           Senior Software Engineer experienced in application design and development, translating business
           requirements to technical specifications, project management, and microservice architecture seeks
           a position which will leverage current and emerging technologies in order to pursue company goals.
-        </p>
+        </div>
 
         <div className="grid grid-cols-3 md:grid-cols-6 gap-4 my-10">
           <div className="flex flex-col items-center">
@@ -33,7 +33,7 @@ export default function BusinessCard() {
                 className="object-contain"
               />
             </div>
-            <div className="text-sm mt-2 text-slate-900">React</div>
+            <div className="text-sm mt-2 dark:text-slate-600 font-semibold">React</div>
           </div>
 
           <div className="flex flex-col items-center">
@@ -46,7 +46,7 @@ export default function BusinessCard() {
                 priority
               />
             </div>
-            <div className="text-sm mt-2 text-slate-900">TypeScript</div>
+            <div className="text-sm mt-2 dark:text-slate-600 font-semibold">TypeScript</div>
           </div>
           
           <div className="flex flex-col items-center">
@@ -58,7 +58,7 @@ export default function BusinessCard() {
                 className="object-contain"
               />
             </div>
-            <div className="text-sm mt-2 text-slate-900">Next.js</div>
+            <div className="text-sm mt-2 dark:text-slate-600 font-semibold">Next.js</div>
           </div>
           
           <div className="flex flex-col items-center">
@@ -70,7 +70,7 @@ export default function BusinessCard() {
                 className="object-contain"
               />
             </div>
-            <div className="text-sm mt-2 text-slate-900">Node.js</div>
+            <div className="text-sm mt-2 dark:text-slate-600 font-semibold">Node.js</div>
           </div>
           
           <div className="flex flex-col items-center">
@@ -82,7 +82,7 @@ export default function BusinessCard() {
                 className="object-contain"
               />
             </div>
-            <div className="text-sm mt-2 text-slate-900">GraphQL</div>
+            <div className="text-sm mt-2 dark:text-slate-600 font-semibold">GraphQL</div>
           </div>
 
           <div className="flex flex-col items-center">
@@ -94,7 +94,7 @@ export default function BusinessCard() {
                 className="object-contain p-1"
               />
             </div>
-            <div className="text-sm mt-2 text-slate-900">AWS</div>
+            <div className="text-sm mt-2 dark:text-slate-600 font-semibolddark:text-slate-600 font-semibold">AWS</div>
           </div>
         </div>
 
