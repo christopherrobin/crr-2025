@@ -1,5 +1,5 @@
 import Navigation from "@/components/Navigation";
-/* import DarkAndLightToggle from "@/components/DarkAndLightToggle"; */
+import DarkAndLightToggle from "@/components/DarkAndLightToggle";
 
 interface PageLayoutProps {
   children: React.ReactNode;
@@ -20,13 +20,9 @@ const containerClass = `flex-grow container mx-auto px-4 sm:px-6 py-4 ${maxWidth
 
   return (
     <div className="flex flex-col">
-      <header className={containerClass}>
+      <header className={`${containerClass} flex items-center justify-between`}>
         <Navigation />
-        {/*
-        <div className="container mx-auto flex justify-between items-center">
-          <DarkAndLightToggle />
-        </div>
-        */}
+        <DarkAndLightToggle />
       </header>
 
       <main className={containerClass}>
